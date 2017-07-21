@@ -1,0 +1,38 @@
+{template "content","header"}
+    <div class="neirong">
+        <!--<div class="fenlei">
+            <h3>分类：</h3>
+             <ul>
+                {loop filters('pp_xx',$modelid) $r} 
+				<li><a href="javascript:;">{$r[menu]}</a></li>
+				{/loop}
+             </ul>
+         </div>-->
+         <div class="fengexian"></div>
+         <div class="fengmianliebiao">
+             {php $sql = structure_filters_sql($modelid)}  
+			{php $urlrule = makeurlrule()}  
+			{pc:content action="lists" where="$sql" catid="11" page="$_GET[page]" num="30" order="id DESC" urlrule="$urlrule"}
+             <ul class="liebiao">
+                 {loop $data $r}
+                 <li>
+                     <a href="{$r[url]}" target="_blank">
+                        <div class="liebiaotu">
+                            <img src="{$r[fengmiantu]}" width="224" height="200" alt="">
+                        </div>
+                        <div class="liebiaomiaoshu">
+                            <p class="nianfen">{$r[title]}</p>
+                            <p class="vs">{$r[qiudui_1]} <span style="">VS</span> {$r[qiudui_2]}</p>
+                        </div>
+                     </a>
+                 </li>
+                 {/loop}
+             </ul>
+             {/pc}
+         </div>
+		 <div class="fengexian"></div>
+		 <div class="fenye">
+			{$my_pages}
+		 </div>
+    </div>
+{template "content","footer"}

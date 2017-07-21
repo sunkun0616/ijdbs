@@ -1,0 +1,12 @@
+<div id="footer">
+{pc:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+<a href="{$r[url]}" target="_blank">{$r[catname]}</a> |  
+{/loop}
+{/pc}
+
+<p class="cp">Powered by <strong><a href="{APP_PATH}" target="_blank">经典比赛(ijdbs.com)</a></strong> &copy; {date('Y', SYS_TIME)}</p>
+<p>有任何建议或意见，都欢迎联系我们：<a href="https://mail.qq.com/">251960747@qq.com</a>邮箱。</p>
+</div>
+</body>
+</html>

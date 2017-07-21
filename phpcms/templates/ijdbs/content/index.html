@@ -1,0 +1,199 @@
+{template "content","header"}
+<!-- start Slider -->
+<div class="banner">
+<div class="lunbo">
+	<div id="banner_left">
+		<a class="control prev"></a><a class="control next abs"></a><!--自定义按钮，移动端可不写-->
+		<div class="slider" style="width:800px;height:450px"><!--主体结构，请用此类名调用插件，此类名可自定义-->
+			{pc:content  action="position" posid="1" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $v}
+				<li><a href="{$v[url]}" target="_blank"><img src="{thumb($v[thumb],800,450)}" alt="{$v[title]}" /></a></li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<div id="banner_right">
+		<div class="index_news">
+			<p>{$CATEGORYS[14][catname]}</p>
+			<a href="{$CATEGORYS[14][url]}" target="_blank">更多></a>
+		</div>
+		{pc:content  action="position" posid="2" order="listorder DESC" num="10"}
+		<ul>
+			{loop $data $v}
+			<li><a href="{$v[url]}" title="{$v[title]}" target="_blank">{$v[title]}</a></li>
+			{/loop}
+		</ul>
+		{/pc}
+	</div>
+</div>
+</div>
+<div class="content">
+	<!--最新视频[posid_36]-->
+	<div class="video_mod">
+		<div class="mod_title"><h2>最新视频</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="36" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="{$r[title]}" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<!--独家精选[posid_35]-->
+	<!--<div class="video_mod">
+		<div class="mod_title"><h2>独家精选</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="35" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>-->
+	<!--NBA总决赛[posid_34]-->
+	<div class="video_mod">
+		<div class="mod_title"><h2>NBA总决赛</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="34" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<!--NBA全明星[posid_33]-->
+	<div class="video_mod">
+		<div class="mod_title"><h2>NBA全明星</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="33" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<!--NBA经典[posid_30]-->
+	<div class="video_mod">
+		<div class="mod_title"><h2>NBA经典</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="30" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<!--世界杯[posid_32]-->
+	<!--
+	<div class="video_mod">
+		<div class="mod_title"><h2>世界杯</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="32" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	-->
+	<!--欧冠[posid_31]-->
+	<!--
+	<div class="video_mod">
+		<div class="mod_title"><h2>欧冠</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="31" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	-->
+	<!--纪录片[posid_30]-->
+	<!--<div class="video_mod">
+		<div class="mod_title"><h2>纪录片</h2></div>
+		<div class="mod_content">
+			{pc:content action="position" posid="36" order="listorder DESC" num="5"}
+			<ul>
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],220,160)}" alt="" width="220" height="160" />
+						<strong>{$r[title]}</strong>
+					</a>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>-->
+	<!--广告-->
+	<!--<div class="guanggao_1">
+		<a href="#" target="_blank"><img src="" alt="" /></a>
+	</div>-->
+	<!--友情链接-->
+	<!--
+	<div class="link">
+		<div class="link_title"><h2>友情链接</h2></div>
+		<ul>
+			{pc:link  action="type_list" order="listorder DESC" num="28" return="pic_link"} 
+			{loop $pic_link $v} 
+			<li><a href="{$v[url]}" target="_blank">{$v[name]}</a></li>
+			{/loop}
+			{/pc}
+		</ul>
+	</div>
+	-->
+</div>
+{template "content","footer"}

@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="author" content="">
+<link rel="icon" type="image/ico" href="{APP_PATH}favicon.ico">
+<!--STYLESHEETS-->
+<link href="{CSS_PATH}pxgrids/reset.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}pxgrids/banner.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}pxgrids/blue.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}pxgrids/common.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}pxgrids/liebiao.css" rel="stylesheet" type="text/css">
+<!--JAVASCRIPTS-->
+<script type="text/javascript" src="{JS_PATH}pxgrids/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}pxgrids/focus.js"></script>
+</head>
+<body>
+<!--start header-wrapper-->
+<div id="header-wrapper">
+    <!--start header-->
+    <div id="header">
+      <div class="logoheader"><a href="{siteurl($siteid)}" id="logo"></a></div>
+		<!--导航开始-->
+		<div id="navigation">
+			<ul id="nav" class="dropmenu">
+				{pc:content action="category" catid="0" num="6" order="listorder ASC"}
+				<li><a href="{siteurl($siteid)}"><span>首&nbsp;页</span></a></li>
+				{loop $data $r}
+				<li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+				{/loop}
+				{/pc}
+			</ul>
+		</div>
+		<!--导航结束-->
+		<!--登录注册按钮-->
+		<!--<div class="login lh24 blue">
+			<span class="rt">
+				<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="230" height="70" frameborder="0" scrolling="no"></iframe>')</script>
+			</span>
+		</div>-->
+		<!--搜索框-->
+		<!--<div class="side-search">
+			<input type="text" readonly="readonly" class="search-ipt" placeholder="搜全文-暂不可用">
+			<a class="search-btn"></a>
+		</div>
+		-->
+    </div>
+    <!--[END] header-->
+</div>
+<!--[END] header-wrapper-->

@@ -1,0 +1,8 @@
+#banner_left {position:relative;}
+#banner_left a.control {position:absolute;display: block;top: 50%;margin-top: -78px;width: 76px;height: 112px;cursor: pointer;z-index: 2;background: url(../../images/pxgrids/buttons.png) no-repeat}
+#banner_left a.prev {left: 0;background-position: 0 0}
+#banner_left a.next {right: 0;background-position: -76px 0}
+#banner_left a.prev:hover {background-position: 0 -112px}
+#banner_left a.next:hover {background-position: -76px -112px}
+/*----------------------------为保证最佳效果，建议设置如下样式------------------------*/
+.slider {display: none}

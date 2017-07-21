@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title>国际比赛 - 篮球经典比赛 | NBA经典比赛视频_NBA总决赛视频_NBA全明星视频</title>
+<meta name="keywords" content="篮球经典比赛，经典比赛视频，NBA经典比赛视频，NBA总决赛视频，NBA全明星视频，NBA常规赛视频">
+<meta name="description" content="篮球经典比赛是为广大篮球爱好者收集NBA经典比赛视频、NBA历届总决赛视频、NBA全明星赛视频、NBA常规赛视频、NBA季后赛视频等多种篮球经典比赛视频的网站。">
+<meta name="author" content="">
+<link rel="icon" type="image/ico" href="http://www.ijdbs.com/favicon.ico">
+<!--STYLESHEETS-->
+<link href="http://www.ijdbs.com/statics/css/pxgrids/reset.css" rel="stylesheet" type="text/css">
+<link href="http://www.ijdbs.com/statics/css/pxgrids/banner.css" rel="stylesheet" type="text/css">
+<link href="http://www.ijdbs.com/statics/css/pxgrids/blue.css" rel="stylesheet" type="text/css">
+<link href="http://www.ijdbs.com/statics/css/pxgrids/common.css" rel="stylesheet" type="text/css">
+<link href="http://www.ijdbs.com/statics/css/pxgrids/liebiao.css" rel="stylesheet" type="text/css">
+<!--JAVASCRIPTS-->
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/focus.js"></script>
+</head>
+<body>
+<!--start header-wrapper-->
+<div id="header-wrapper">
+    <!--start header-->
+    <div id="header">
+      <div class="logoheader"><a href="http://www.ijdbs.com" id="logo"></a></div>
+		<!--导航开始-->
+		<div id="navigation">
+			<ul id="nav" class="dropmenu">
+								<li><a href="http://www.ijdbs.com"><span>首&nbsp;页</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/nbafinals/"><span>NBA总决赛</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/nbaplayoffs/"><span>NBA季后赛</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/nbaregularseason/"><span>NBA常规赛</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/nbaallstar/"><span>NBA全明星</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/international/"><span>国际比赛</span></a></li>
+								<li><a href="http://www.ijdbs.com/html/newsreel/"><span>纪录片</span></a></li>
+											</ul>
+		</div>
+		<!--导航结束-->
+		<!--登录注册按钮-->
+		<!--<div class="login lh24 blue">
+			<span class="rt">
+				<script type="text/javascript">document.write('<iframe src="http://www.ijdbs.com/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="230" height="70" frameborder="0" scrolling="no"></iframe>')</script>
+			</span>
+		</div>-->
+		<!--搜索框-->
+		<!--<div class="side-search">
+			<input type="text" readonly="readonly" class="search-ipt" placeholder="搜全文-暂不可用">
+			<a class="search-btn"></a>
+		</div>
+		-->
+    </div>
+    <!--[END] header-->
+</div>
+<!--[END] header-wrapper-->    <div class="neirong">
+         <div class="fengexian"></div>
+         <div class="fengmianliebiao">
+              
+			  
+			             <div class="liebiao">
+                                  <li>
+                     <a href="http://www.ijdbs.com/html/international/2.html" target="_blank">
+                        <div class="liebiaotu">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711065649842.jpg" alt="">
+                        </div>
+                        <div class="liebiaomiaoshu">
+                            <p class="nianfen">[国际比赛]2012年奥运会男篮小组赛</p>
+                            <p class="vs">西班牙 <span style="">VS</span> 中国</p>
+                        </div>
+                     </a>
+                 </li>
+                                  <li>
+                     <a href="http://www.ijdbs.com/html/international/1.html" target="_blank">
+                        <div class="liebiaotu">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711065527403.png" alt="">
+                        </div>
+                        <div class="liebiaomiaoshu">
+                            <p class="nianfen">[国际比赛]2008年北京奥运会男篮决赛 美国冠军</p>
+                            <p class="vs">美国 <span style="">VS</span> 西班牙</p>
+                        </div>
+                     </a>
+                 </li>
+                              </div>
+             			<ul class="list">数据加载中，请稍后...</ul>
+			<div class="more"><a href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a></div>
+         </div>
+		 <div class="fengexian"></div>
+	<script>
+		var _content = []; //临时存储li循环内容
+		var lanren = {
+			_default:20, //默认显示图片个数
+			_loading:10,  //每次点击按钮后加载的个数
+			init:function(){
+				var lis = $(".fengmianliebiao .liebiao li");
+				$(".fengmianliebiao ul.list").html("");
+				for(var n=0;n<lanren._default;n++){
+					lis.eq(n).appendTo(".fengmianliebiao ul.list");
+				}
+				$(".fengmianliebiao ul.list img").each(function(){
+					$(this).attr('src',$(this).attr('realSrc'));
+				})
+				for(var i=lanren._default;i<lis.length;i++){
+					_content.push(lis.eq(i));
+				}
+				$(".fengmianliebiao .liebiao").html("");
+			},
+			loadMore:function(){
+				var mLis = $(".fengmianliebiao ul.list li").length;
+				for(var i =0;i<lanren._loading;i++){
+					var target = _content.shift();
+					if(!target){
+						$('.fengmianliebiao .more').html("<p>已经到底了...</p>");
+						break;
+					}
+					$(".fengmianliebiao ul.list").append(target);
+					$(".fengmianliebiao ul.list img").eq(mLis+i).each(function(){
+						$(this).attr('src',$(this).attr('realSrc'));
+					});
+				}
+			}
+		}
+		lanren.init();
+	</script>
+    </div>
+﻿<!--start footer-->
+<div id="footer">
+  <!--start fcontent-->
+  <div class="fcontent">
+      <div class="copyright_top">
+          <div class="top_guanyu">
+              <span>关于</span>
+              <a href="http://www.ijdbs.com/html/lianxiwomen/">合作联系</a>
+          </div>
+          <div class="top_lanqiu">
+              <span>篮球专区</span>
+              <a href="http://www.ijdbs.com/html/nbafinals/">NBA 总决赛</a>
+              <a href="http://www.ijdbs.com/html/nbaallstar/">NBA 全明星</a>
+              <a href="http://www.ijdbs.com/html/nbaplayoffs/">NBA 季后赛</a>
+			  <a href="http://www.ijdbs.com/html/international/">国际赛场</a>
+          </div>
+          <div class="top_zuqiu">
+              <span>足球专区</span>
+              <a href="http://www.ijdbs.com/html/football/">英超</a>
+              <a href="http://www.ijdbs.com/html/football/">欧冠</a>
+              <a href="http://www.ijdbs.com/html/football/">世界杯</a>
+          </div>
+          <div class="top_zhongguo">
+              <span>中国专区</span>
+              <a href="http://www.ijdbs.com/html/pingpang/">乒乓球</a>
+              <a href="http://www.ijdbs.com/html/other/">排球</a>
+              <a href="http://www.ijdbs.com/html/tianjing/">游泳</a>
+          </div>
+          <div class="top_qita">
+              <span>其它</span>
+              <a href="http://www.ijdbs.com/html/zhuoqiu/">桌球</a>
+          </div>
+          <div class="top_erweima">
+              <span>获取更多经典比赛</span>
+              <img src="http://www.ijdbs.com/statics/images/pxgrids/small_erweima.jpg" alt="扫啊扫">
+          </div>
+      </div>
+      <div class="copyright_bottom">
+		<p class="cp">Powered by <strong><a href="http://www.ijdbs.com/" style="color:#f6f6f6">篮球经典比赛(ijdbs.com)</a></strong> &copy; 2017</p>
+		<p>有任何建议或意见，都欢迎联系我们：251960747@qq.com邮箱。</p>
+		<p style="color:#f6f6f6">备案号 : 京ICP备16017871号-2&nbsp;&nbsp;<!--cnzz统计--><script src="https://s11.cnzz.com/z_stat.php?id=1261713751&web_id=1261713751" nofollow language="JavaScript"></script></p>
+      </div>
+  </div>
+  <!--[END] fcontent-->  
+</div>
+<!--[END] footer-->
+<!--start TO TOP-->
+<a href="#" id="toTop" style="display: inline; "><span id="toTopHover" style="opacity: 0; "></span>To Top</a>
+<!--easing plugin ( optional )-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/easing.js" type="text/javascript"></script>
+<!--UItoTop plugin-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/jquery.ui.totop.js" type="text/javascript"></script>
+<!--Starting the plugin-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<!--首页轮播-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/YuxiSlider.jQuery.min.js"></script>
+<script>
+$(".slider").YuxiSlider({
+	width:800, //容器宽度
+	height:450, //容器高度
+	control:$('.control'), //绑定控制按钮
+	during:3000, //间隔4秒自动滑动
+	speed:800, //移动速度0.8秒
+	mousewheel:true, //是否开启鼠标滚轮控制
+	direkey:true //是否开启左右箭头方向控制
+});
+</script>
+<!--END TO TOP-->
+</body>
+<!--禁止右键点击与选择-->
+<script type="text/javascript"> 
+document.body.onselectstart=document.body.oncontextmenu=function(){ return false;} 
+</script> 
+</html>
