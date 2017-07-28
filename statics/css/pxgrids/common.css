@@ -9,7 +9,7 @@ body{font-family:"微软雅黑";}
 .index_news a:hover{text-decoration:underline;}
 /*#banner_right ul{padding:17px 20px;}*/
 #banner_right ul li{line-height:40px;}
-#banner_right ul li a{display: block;padding-left: 33px;color:#14171a;background: url(../../images/pxgrids/dot_471f17.png) no-repeat 16px center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 15px;padding-right: 15px;}
+#banner_right ul li a{display: block;width:318px;padding-left: 33px;color:#14171a;background: url(../../images/pxgrids/dot_471f17.png) no-repeat 16px center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 15px;padding-right: 15px;}
 #banner_right ul li a:hover{background: #edf1f4 url(../../images/pxgrids/dot_471f17.png) no-repeat 15px center;padding-left: 32px;border-left: 1px solid #1377c3;color:#2587d4;}
 /*首页内容区域样式*/
 .content{width:100%;}

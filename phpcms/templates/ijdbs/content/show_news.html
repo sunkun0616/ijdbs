@@ -1,0 +1,56 @@
+{template "content","header"}
+	<style>
+		body{background:#f6f6f6;}
+	</style>
+    <div class="neirong">
+		<div class="fengexian"></div>
+		<div class="xiangqing_content">
+		<div>
+			<div class="xiangqing_left">
+				<h1>{$title}</h1>
+				<div class="fabushijian">发布日期：{$inputtime} &nbsp;&nbsp;|&nbsp;&nbsp; <span>点击&nbsp;:&nbsp;</span><span id="hits"></span>&nbsp;次&nbsp;</div>
+				
+				<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+				<div class="fengexian_1"></div>
+				<p>{$content}</p>
+				<div class="fengexian"></div>
+				<center><h4 style="font-size:20px;font-family:'微软雅黑';margin-top:30px;">扫码打赏，建议金额1-10元，土豪随意。</h4></center>
+				<div class="erweima">
+					<div class="dashang">
+						<img src="{IMG_PATH}pxgrids/wechat.png" alt="谢谢支持" style="border:10px solid #8BC41D;" />
+						<span class="saoma">微信扫码打赏</span>
+					</div>
+					<div class="dashang">
+						<img src="{IMG_PATH}pxgrids/zhifubao.png" alt="谢谢鼓励" style="border:10px solid #009FE3;" />
+						<span class="saoma">支付宝扫码打赏</span>
+					</div>
+				</div>
+				<!--评论专区-->
+				<!--{if $allow_comment && module_exists('comment')}
+				<iframe src="{APP_PATH}index.php?m=comment&c=index&a=init&commentid={id_encode("content_$catid",$id,$siteid)}&iframe=1" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+				{/if}-->
+			</div>
+			<div class="xiangqing_right">
+				<h2>推荐专栏</h2>
+				<div class="tuijian">
+					{pc:content action="position" posid="37" order="listorder DESC" num="4"}
+					<ul>
+						{loop $data $r}
+						<li>
+							<a class="xiangqing_a" href="{$r[url]}" target="_blank">
+								<dl>
+									<dt class="fl"><img src="{thumb($r[thumb],130,77)}" width="130" height="77" alt="{$r[title]}" /></dt>
+									<dd class="fr">{$r[title]}</dd>
+								</dl>
+							</a>
+						</li>
+						{/loop}
+					</ul>
+					{/pc}
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="fengexian"></div>
+	</div>
+{template "content","footer"}

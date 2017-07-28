@@ -53,85 +53,85 @@
     <!--[END] header-->
 </div>
 <!--[END] header-wrapper-->    <div class="neirong">
-         <div class="fengexian"></div>
-         <div class="fengmianliebiao">
+        <div class="fengexian"></div>
+        <div class="fengmianliebiao">
               
 			  
-			             <div class="liebiao">
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaallstar/3.html" target="_blank">
+			            <div class="liebiao">
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaallstar/3.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711065158414.jpg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723044329505.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA全明星]2013-14赛季NBA全明星 欧文获得MVP</p>
                             <p class="vs">西部 <span style="">VS</span> 东部</p>
                         </div>
-                     </a>
-                 </li>
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaallstar/2.html" target="_blank">
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaallstar/2.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711064831653.jpg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723044202972.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA全明星]2012-13赛季NBA全明星 保罗MVP</p>
                             <p class="vs">西部 <span style="">VS</span> 东部</p>
                         </div>
-                     </a>
-                 </li>
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaallstar/1.html" target="_blank">
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaallstar/1.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711064551929.jpeg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723044721962.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA全明星]2015-16赛季NBA全明星赛 科比全明星谢幕战</p>
                             <p class="vs">西部 <span style="">VS</span> 东部</p>
                         </div>
-                     </a>
-                 </li>
-                              </div>
-             			<ul class="list">数据加载中，请稍后...</ul>
+                    </a>
+                </li>
+                            </div>
+            			<ul class="list">数据加载中，请稍后...</ul>
 			<div class="more"><a href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a></div>
-         </div>
-		 <div class="fengexian"></div>
-	<script>
-		var _content = []; //临时存储li循环内容
-		var lanren = {
-			_default:20, //默认显示图片个数
-			_loading:10,  //每次点击按钮后加载的个数
-			init:function(){
-				var lis = $(".fengmianliebiao .liebiao li");
-				$(".fengmianliebiao ul.list").html("");
-				for(var n=0;n<lanren._default;n++){
-					lis.eq(n).appendTo(".fengmianliebiao ul.list");
-				}
-				$(".fengmianliebiao ul.list img").each(function(){
-					$(this).attr('src',$(this).attr('realSrc'));
-				})
-				for(var i=lanren._default;i<lis.length;i++){
-					_content.push(lis.eq(i));
-				}
-				$(".fengmianliebiao .liebiao").html("");
-			},
-			loadMore:function(){
-				var mLis = $(".fengmianliebiao ul.list li").length;
-				for(var i =0;i<lanren._loading;i++){
-					var target = _content.shift();
-					if(!target){
-						$('.fengmianliebiao .more').html("<p>已经到底了...</p>");
-						break;
+        </div>
+		<script>
+			var _content = []; //临时存储li循环内容
+			var lanren = {
+				_default:20, //默认显示图片个数
+				_loading:8,  //每次点击按钮后加载的个数
+				init:function(){
+					var lis = $(".fengmianliebiao .liebiao li");
+					$(".fengmianliebiao ul.list").html("");
+					for(var n=0;n<lanren._default;n++){
+						lis.eq(n).appendTo(".fengmianliebiao ul.list");
 					}
-					$(".fengmianliebiao ul.list").append(target);
-					$(".fengmianliebiao ul.list img").eq(mLis+i).each(function(){
+					$(".fengmianliebiao ul.list img").each(function(){
 						$(this).attr('src',$(this).attr('realSrc'));
-					});
+					})
+					for(var i=lanren._default;i<lis.length;i++){
+						_content.push(lis.eq(i));
+					}
+					$(".fengmianliebiao .liebiao").html("");
+				},
+				loadMore:function(){
+					var mLis = $(".fengmianliebiao ul.list li").length;
+					for(var i =0;i<lanren._loading;i++){
+						var target = _content.shift();
+						if(!target){
+							$('.fengmianliebiao .more').html("<p>啊,已经到底了...</p>");
+							break;
+						}
+						$(".fengmianliebiao ul.list").append(target);
+						$(".fengmianliebiao ul.list img").eq(mLis+i).each(function(){
+							$(this).attr('src',$(this).attr('realSrc'));
+						});
+					}
 				}
 			}
-		}
-		lanren.init();
-	</script>
+			lanren.init();
+		</script>
+		<div class="fengexian"></div>
     </div>
 ﻿<!--start footer-->
 <div id="footer">
@@ -181,29 +181,29 @@
 <!--[END] footer-->
 <!--start TO TOP-->
 <a href="#" id="toTop" style="display: inline; "><span id="toTopHover" style="opacity: 0; "></span>To Top</a>
-	<!--easing plugin ( optional )-->
-	<script src="http://www.ijdbs.com/statics/js/pxgrids/easing.js" type="text/javascript"></script>
-	<!--UItoTop plugin-->
-	<script src="http://www.ijdbs.com/statics/js/pxgrids/jquery.ui.totop.js" type="text/javascript"></script>
-	<!--Starting the plugin-->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<!--首页轮播-->
-    <script src="http://www.ijdbs.com/statics/js/pxgrids/YuxiSlider.jQuery.min.js"></script>
-	<script>
-	$(".slider").YuxiSlider({
-		width:800, //容器宽度
-		height:450, //容器高度
-		control:$('.control'), //绑定控制按钮
-		during:3000, //间隔4秒自动滑动
-		speed:800, //移动速度0.8秒
-		mousewheel:true, //是否开启鼠标滚轮控制
-		direkey:true //是否开启左右箭头方向控制
+<!--easing plugin ( optional )-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/easing.js" type="text/javascript"></script>
+<!--UItoTop plugin-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/jquery.ui.totop.js" type="text/javascript"></script>
+<!--Starting the plugin-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
 	});
-	</script>
+</script>
+<!--首页轮播-->
+<script src="http://www.ijdbs.com/statics/js/pxgrids/YuxiSlider.jQuery.min.js"></script>
+<script>
+$(".slider").YuxiSlider({
+	width:800, //容器宽度
+	height:450, //容器高度
+	control:$('.control'), //绑定控制按钮
+	during:3000, //间隔4秒自动滑动
+	speed:800, //移动速度0.8秒
+	mousewheel:true, //是否开启鼠标滚轮控制
+	direkey:true //是否开启左右箭头方向控制
+});
+</script>
 <!--END TO TOP-->
 </body>
 <!--禁止右键点击与选择-->

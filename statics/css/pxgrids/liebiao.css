@@ -12,7 +12,7 @@ a{text-decoration:none;}
 .side-search .search-btn{width: 45px;height: 30px;border-radius: 0 15px 15px 0;background: url(../../images/pxgrids/search_btn_ico_a2506d.png) no-repeat 12px 5px #2a6cb6;cursor: pointer;float: left;}
 
 
-.neirong{padding:10px;margin:0 auto;width:1200px;height:auto;}
+.neirong{padding:0 10px;margin:0 auto;width:1200px;height:auto;}
 .fengexian{border-top:1px solid #e7e7e7;margin:28px 0;}
 .fengexian_1{border-top:1px dotted #dbdbdb;margin:1px;}
 /*
@@ -33,15 +33,17 @@ a{text-decoration:none;}
 */
 .fengmianliebiao ul.liebiao{ display: none;}
 .fengmianliebiao ul.list{overflow: hidden;}
-.fengmianliebiao ul.list li{width:224px;float:left;padding-right:20px;height:360px;}
+.fengmianliebiao ul.list li{width:288px;float:left;padding-right:20px;height:306px;}
+.fengmianliebiao ul.list li:hover img{-moz-box-transform: scale(1.1);-o-transform: scale(1.1);-webkit-transform: scale(1.1);transform: scale(1.1);}
 .list li:hover  .liebiaomiaoshu p:first-child{color:#006bb7;}
-.fengmianliebiao .more{overflow: hidden;padding:10px 0;text-align: center;}
-.fengmianliebiao .more a{display: block;width: 1200px;height:30px;line-height:30px;color:#006bb7;background:#f0f0f0;text-align:center;font-size:15px;border-radius:6px;}
-.fengmianliebiao .more a:hover{background:#006bb7;color:#fff;}
-.fengmianliebiao .more p{cursor:default;width:1200px;height:30px;line-height:30px;text-align:center;font-size:15px;border-radius:6px;color:#6f6f6f;background:#f5f5f5;}
-.liebiaotu img{width:224px;height:250px;box-shadow: 2px 2px 2px #ccc;}
-.liebiaomiaoshu{width:224px;margin-bottom:10px;}
-.liebiaomiaoshu p{font-size:14px;color:#333;margin:8px 0;}
+.more{overflow: hidden;padding:10px 0;text-align: center;}
+.more a{display: block;width: 1200px;height:30px;line-height:30px;color:#006bb7;background:#f0f0f0;text-align:center;font-size:15px;border-radius:6px;}
+.more a:hover{background:#006bb7;color:#fff;}
+.more p{cursor:default;width:1200px;height:30px;line-height:30px;text-align:center;font-size:15px;border-radius:6px;color:#6f6f6f;background:#f5f5f5;}
+.liebiaotu{overflow:hidden;}
+.liebiaotu img{width:288px;height:208px;transition:0.9s;-moz-box-transition:0.9s;-o-transition:0.9s;-webkit-transition:0.9s;shadow: 2px 2px 2px #ccc;}
+.liebiaomiaoshu{width:288px;margin-bottom:10px;}
+.liebiaomiaoshu p{font-size:16px;color:#333;margin:8px 0;}
 .fenye{margin:0 auto;text-align:center;margin-bottom:40px;width:100%;height:30px;padding:20px 0;}
 .fenye .qian,.fenye .hou{width:58px;}
 .fenye a,.fenye span{text-align:center;padding:0 2px;display:inline-block;min-width:33px;_width: 33px;height:28px;color: #333;line-height: 27px;font-size: 14px;margin: 0 5px;vertical-align: middle;border-radius: 2px;border: 1px solid #e3e3e3;}
@@ -65,6 +67,17 @@ a{text-decoration:none;}
 .liebiao2_shuju table{margin:20px 0;}
 .liebiao2_shuju table caption{font-size:30px;padding-bottom:20px;}
 .liebiao2_shuju table td{padding:5px 17px;text-align:center;}
+/*新闻列表*/
+.liebiao_content{height:auto;margin-top:30px;}
+.liebiao_content h2{height:40px;line-height:40px;font-size:22px;font-weight:400;border-bottom:1px solid #e5e5e5;}
+.liebiao_content a.liebiao_title{padding-bottom:5px;border-bottom:3px solid #006bb7;}
+.xinwen_list{width:1230px;overflow:hidden;padding:30px 0;}
+.xinwen_list ul.list{overflow:hidden;}
+.xinwen_list ul.list a{width:389px;float:left;height:110px;margin-bottom:30px;margin-right:14px;background:#fafafa;}
+.xinwen_list ul.list a img{float:left;margin-right:16px;width:160px;height:110px;background:#000;}
+.xinwen_list ul.list a .text{width:213px;height:110px;float:left;}
+.xinwen_list ul.list a .text span{height:82px;display:block;font-size:16px;}
+.xinwen_list ul.list a .text i{background: url(../../images/pxgrids/icon_16_news_black_e87600.png) no-repeat 0 28%;height:28px;display:block;text-align:right;font-size:normal;}
 /*
 *
 *		详情页样式

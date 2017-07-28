@@ -1,0 +1,64 @@
+{template "content","header"}
+<!-- start mid_caption -->
+<div class="neirong">
+	<div class="liebiao_content">
+		<h2><a href="javascript:;" class="liebiao_title">新闻资讯</a></h2>
+		<div class="xinwen_list">
+			{pc:content action="lists" catid="14" order="id DESC" num="999"}
+			<div class="xinwen_wrap">
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}" target="_blank">
+						<img src="{thumb($r[thumb],160,110)}" alt="{$r[title]}" />
+						<div class="text">
+							<span>{$r[title]}</span>
+							<i>{date('Y-m-d H:i:s',$r[inputtime])}</i>
+						</div>
+					</a>
+				</li>
+				{/loop}
+			</div>
+			{/pc}
+			<ul class="list">数据加载中，请稍后...</ul>
+			<div class="more"><a href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a></div>
+		</div>
+		<script>
+			var _content = []; //临时存储li循环内容
+			var lanren = {
+				_default:18, //默认显示图片个数
+				_loading:9,  //每次点击按钮后加载的个数
+				init:function(){
+					var lis = $(".xinwen_list .xinwen_wrap li");
+					$(".xinwen_list ul.list").html("");
+					for(var n=0;n<lanren._default;n++){
+						lis.eq(n).appendTo(".xinwen_list ul.list");
+					}
+					$(".xinwen_list ul.list img").each(function(){
+						$(this).attr('src',$(this).attr('realSrc'));
+					})
+					for(var i=lanren._default;i<lis.length;i++){
+						_content.push(lis.eq(i));
+					}
+					$(".xinwen_list .xinwen_wrap").html("");
+				},
+				loadMore:function(){
+					var mLis = $(".xinwen_list ul.list li").length;
+					for(var i =0;i<lanren._loading;i++){
+						var target = _content.shift();
+						if(!target){
+							$('.xinwen_list .more').html("<p>啊,已经到底了...</p>");
+							break;
+						}
+						$(".xinwen_list ul.list").append(target);
+						$(".xinwen_list ul.list img").eq(mLis+i).each(function(){
+							$(this).attr('src',$(this).attr('realSrc'));
+						});
+					}
+				}
+			}
+			lanren.init();
+		</script>
+	</div>
+    <div class="fengexian"></div>
+</div>	
+{template "content","footer"}

@@ -19,7 +19,7 @@
 			<p><?php echo $CATEGORYS['14']['catname'];?></p>
 			<a href="<?php echo $CATEGORYS['14']['url'];?>" target="_blank">更多></a>
 		</div>
-		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4f485411cee741d00725f3f3905a68f3&action=position&posid=2&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'10',));}?>
+		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=a91849ebb0c78f351e8701354457e50f&action=position&posid=2&order=listorder+DESC&num=9\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'9',));}?>
 		<ul>
 			<?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
 			<li><a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" target="_blank"><?php echo $v['title'];?></a></li>

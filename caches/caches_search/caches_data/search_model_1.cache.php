@@ -6,6 +6,12 @@ return array (
     'name' => '纪录片',
     'sort' => '0',
   ),
+  27 => 
+  array (
+    'typeid' => '77',
+    'name' => '新闻资讯模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

@@ -14,6 +14,9 @@
 <link href="http://www.ijdbs.com/statics/css/pxgrids/blue.css" rel="stylesheet" type="text/css">
 <link href="http://www.ijdbs.com/statics/css/pxgrids/common.css" rel="stylesheet" type="text/css">
 <link href="http://www.ijdbs.com/statics/css/pxgrids/liebiao.css" rel="stylesheet" type="text/css">
+<!--JAVASCRIPTS-->
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/focus.js"></script>
 </head>
 <body>
 <!--start header-wrapper-->
@@ -50,85 +53,96 @@
     <!--[END] header-->
 </div>
 <!--[END] header-wrapper-->    <div class="neirong">
-         <div class="fengexian"></div>
-         <div class="fengmianliebiao">
+        <div class="fengexian"></div>
+        <div class="fengmianliebiao">
               
 			  
-			             <div class="liebiao">
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaplayoffs/3.html" target="_blank">
+			            <div class="liebiao">
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaplayoffs/4.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0720/20170720065532835.jpg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0726/20170726022506220.png" alt="">
+                        </div>
+                        <div class="liebiaomiaoshu">
+                            <p class="nianfen">[NBA季后赛]2016-17赛季NBA西部半决赛 马努封盖哈登</p>
+                            <p class="vs">马刺 <span style="">VS</span> 火箭</p>
+                        </div>
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaplayoffs/3.html" target="_blank">
+                        <div class="liebiaotu">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723043103807.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA季后赛]2006-07赛季NBA东部决赛 詹姆斯绝杀</p>
                             <p class="vs">活塞 <span style="">VS</span> 骑士</p>
                         </div>
-                     </a>
-                 </li>
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaplayoffs/2.html" target="_blank">
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaplayoffs/2.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711064216304.jpg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723043313295.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA季后赛]2008-09赛季NBA东部季后赛 三加时经典比赛</p>
                             <p class="vs">公牛 <span style="">VS</span> 凯尔特人</p>
                         </div>
-                     </a>
-                 </li>
-                                  <li>
-                     <a href="http://www.ijdbs.com/html/nbaplayoffs/1.html" target="_blank">
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.ijdbs.com/html/nbaplayoffs/1.html" target="_blank">
                         <div class="liebiaotu">
-                            <img src="http://www.ijdbs.com/uploadfile/2017/0711/20170711063937910.jpg" alt="">
+                            <img src="http://www.ijdbs.com/uploadfile/2017/0723/20170723043520724.jpg" alt="">
                         </div>
                         <div class="liebiaomiaoshu">
                             <p class="nianfen">[NBA季后赛]2005-06赛季NBA季后赛 科比双绝杀太阳</p>
                             <p class="vs">湖人 <span style="">VS</span> 太阳</p>
                         </div>
-                     </a>
-                 </li>
-                              </div>
-             			<ul class="list">数据加载中，请稍后...</ul>
+                    </a>
+                </li>
+                            </div>
+            			<ul class="list">数据加载中，请稍后...</ul>
 			<div class="more"><a href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a></div>
-         </div>
-		 <div class="fengexian"></div>
-	<script>
-		var _content = []; //临时存储li循环内容
-		var lanren = {
-			_default:20, //默认显示图片个数
-			_loading:10,  //每次点击按钮后加载的个数
-			init:function(){
-				var lis = $(".fengmianliebiao .liebiao li");
-				$(".fengmianliebiao ul.list").html("");
-				for(var n=0;n<lanren._default;n++){
-					lis.eq(n).appendTo(".fengmianliebiao ul.list");
-				}
-				$(".fengmianliebiao ul.list img").each(function(){
-					$(this).attr('src',$(this).attr('realSrc'));
-				})
-				for(var i=lanren._default;i<lis.length;i++){
-					_content.push(lis.eq(i));
-				}
-				$(".fengmianliebiao .liebiao").html("");
-			},
-			loadMore:function(){
-				var mLis = $(".fengmianliebiao ul.list li").length;
-				for(var i =0;i<lanren._loading;i++){
-					var target = _content.shift();
-					if(!target){
-						$('.fengmianliebiao .more').html("<p>已经到底了...</p>");
-						break;
+        </div>
+		<script>
+			var _content = []; //临时存储li循环内容
+			var lanren = {
+				_default:20, //默认显示图片个数
+				_loading:8,  //每次点击按钮后加载的个数
+				init:function(){
+					var lis = $(".fengmianliebiao .liebiao li");
+					$(".fengmianliebiao ul.list").html("");
+					for(var n=0;n<lanren._default;n++){
+						lis.eq(n).appendTo(".fengmianliebiao ul.list");
 					}
-					$(".fengmianliebiao ul.list").append(target);
-					$(".fengmianliebiao ul.list img").eq(mLis+i).each(function(){
+					$(".fengmianliebiao ul.list img").each(function(){
 						$(this).attr('src',$(this).attr('realSrc'));
-					});
+					})
+					for(var i=lanren._default;i<lis.length;i++){
+						_content.push(lis.eq(i));
+					}
+					$(".fengmianliebiao .liebiao").html("");
+				},
+				loadMore:function(){
+					var mLis = $(".fengmianliebiao ul.list li").length;
+					for(var i =0;i<lanren._loading;i++){
+						var target = _content.shift();
+						if(!target){
+							$('.fengmianliebiao .more').html("<p>啊,已经到底了...</p>");
+							break;
+						}
+						$(".fengmianliebiao ul.list").append(target);
+						$(".fengmianliebiao ul.list img").eq(mLis+i).each(function(){
+							$(this).attr('src',$(this).attr('realSrc'));
+						});
+					}
 				}
 			}
-		}
-		lanren.init();
-	</script>
+			lanren.init();
+		</script>
+		<div class="fengexian"></div>
     </div>
 ﻿<!--start footer-->
 <div id="footer">
@@ -175,13 +189,49 @@
   </div>
   <!--[END] fcontent-->  
 </div>
+<!--右下角弹窗-->
+<!--
+<div id="pop" style="display:none;">
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	#pop{background:#fff;width:260px;border:1px solid #e0e0e0;font-size:12px;position: fixed;right:10px;bottom:10px;}
+	#popHead{line-height:32px;background:#f6f0f3;border-bottom:1px solid #e0e0e0;position:relative;font-size:12px;padding:0 0 0 10px;}
+	#popHead h2{font-size:14px;color:#666;line-height:32px;height:32px;}
+	#popHead #popClose{position:absolute;right:10px;top:1px;}
+	#popHead a#popClose:hover{color:#f00;cursor:pointer;}
+	#popContent{padding:5px 10px;}
+	#popTitle a{line-height:24px;font-size:14px;font-family:'微软雅黑';color:#333;font-weight:bold;text-decoration:none;}
+	#popTitle a:hover{color:#f60;}
+	#popIntro{text-indent:24px;line-height:160%;margin:5px 0;color:#666;}
+	#popMore{text-align:right;border-top:1px dotted #ccc;line-height:24px;margin:8px 0 0 0;}
+	#popMore a{color:#f60;}
+	#popMore a:hover{color:#f00;}
+	</style>
+	<div id="popHead">
+		<a id="popClose" title="关闭">关闭</a>
+		<h2>温馨提示</h2>
+	</div>
+	<div id="popContent">
+		<dl>
+			<dt id="popTitle"></dt>
+			<dd id="popIntro"></dd>
+		</dl>
+	</div>
+</div>
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/pop.js"></script>
+<script type="text/javascript" >
+	  //使用参数：1.标题，2.链接地址，3.内容简介
+	  window.onload=function(){
+			var pop=new Pop("this is title",
+			"javascript:;",
+			"CTRL + D 收藏网址");
+		}
+</script>
+-->
+<!--右下角弹窗-->
 <!--[END] footer-->
 <!--start TO TOP-->
 <a href="#" id="toTop" style="display: inline; "><span id="toTopHover" style="opacity: 0; "></span>To Top</a>
-<!--JAVASCRIPTS-->
-<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/jquery-1.7.2.min.js"></script>
-</script>
-<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/focus.js"></script>
 <!--easing plugin ( optional )-->
 <script src="http://www.ijdbs.com/statics/js/pxgrids/easing.js" type="text/javascript"></script>
 <!--UItoTop plugin-->

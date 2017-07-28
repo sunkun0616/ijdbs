@@ -79,13 +79,13 @@
 							x:'',//调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
 							//默认图片地址
 							i:'http://www.ijdbs.com/uploadfile/2017/0716/20170716123105329.jpg',//初始图片地址
-							d:'http://www.ckplayer.com/down/pause6.1_1.swf|http://www.ckplayer.com/down/pause6.1_2.swf',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
+							d:'',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
 							u:'',//暂停时如果是图片的话，加个链接地址
-							l:'http://www.ckplayer.com/down/adv6.1_1.swf|http://www.ckplayer.com/down/adv6.1_2.swf',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
+							l:'',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
 							r:'',//前置广告的链接地址，多个用竖线隔开，没有的留空
 							t:'10|10',//视频开始前播放swf/图片时的时间，多个用竖线隔开
 							y:'',//这里是使用网址形式调用广告地址时使用，前提是要设置l的值为空
-							z:'http://www.ckplayer.com/down/buffer.swf',//缓冲广告，只能放一个，swf格式
+							z:'',//缓冲广告，只能放一个，swf格式
 							e:'8',//视频结束后的动作，0是调用js函数，1是循环播放，2是暂停播放并且不调用广告，3是调用视频推荐列表的插件，4是清除视频流并调用js功能和1差不多，5是暂停播放并且调用暂停广告
 							v:'80',//默认音量，0-100之间
 							p:'0',//视频默认0是暂停，1是播放，2是不加载视频
@@ -117,7 +117,7 @@
 								CKobject.embedHTML5('a1','ckplayer_a1',800,444,video,flashvars,support);
 							}
 							else{
-								alert('您好，非常抱歉，你的浏览器不支持html5，请您升级你的浏览器继续访问！');
+								alert('非常抱歉，你的浏览器不支持html5，视频无法观看，请您升级你的浏览器后继续访问页面！');
 							}
 						}
 						addhtml5();
@@ -228,6 +228,46 @@
   </div>
   <!--[END] fcontent-->  
 </div>
+<!--右下角弹窗-->
+<!--
+<div id="pop" style="display:none;">
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	#pop{background:#fff;width:260px;border:1px solid #e0e0e0;font-size:12px;position: fixed;right:10px;bottom:10px;}
+	#popHead{line-height:32px;background:#f6f0f3;border-bottom:1px solid #e0e0e0;position:relative;font-size:12px;padding:0 0 0 10px;}
+	#popHead h2{font-size:14px;color:#666;line-height:32px;height:32px;}
+	#popHead #popClose{position:absolute;right:10px;top:1px;}
+	#popHead a#popClose:hover{color:#f00;cursor:pointer;}
+	#popContent{padding:5px 10px;}
+	#popTitle a{line-height:24px;font-size:14px;font-family:'微软雅黑';color:#333;font-weight:bold;text-decoration:none;}
+	#popTitle a:hover{color:#f60;}
+	#popIntro{text-indent:24px;line-height:160%;margin:5px 0;color:#666;}
+	#popMore{text-align:right;border-top:1px dotted #ccc;line-height:24px;margin:8px 0 0 0;}
+	#popMore a{color:#f60;}
+	#popMore a:hover{color:#f00;}
+	</style>
+	<div id="popHead">
+		<a id="popClose" title="关闭">关闭</a>
+		<h2>温馨提示</h2>
+	</div>
+	<div id="popContent">
+		<dl>
+			<dt id="popTitle"></dt>
+			<dd id="popIntro"></dd>
+		</dl>
+	</div>
+</div>
+<script type="text/javascript" src="http://www.ijdbs.com/statics/js/pxgrids/pop.js"></script>
+<script type="text/javascript" >
+	  //使用参数：1.标题，2.链接地址，3.内容简介
+	  window.onload=function(){
+			var pop=new Pop("this is title",
+			"javascript:;",
+			"CTRL + D 收藏网址");
+		}
+</script>
+-->
+<!--右下角弹窗-->
 <!--[END] footer-->
 <!--start TO TOP-->
 <a href="#" id="toTop" style="display: inline; "><span id="toTopHover" style="opacity: 0; "></span>To Top</a>
